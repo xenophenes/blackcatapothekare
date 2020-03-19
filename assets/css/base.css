@@ -1,0 +1,343 @@
+/**
+ * Base & Page Styles
+ * - About
+ * - Contact
+ * - Blog
+ * - Shop
+ * - Typography
+ * - Utilities
+ * - Backgrounds
+ * - Lines
+ * - Navigation
+ * - Footer
+ * - Jumbotron
+ * - Media Queries
+ */
+
+/* ABOUT */
+
+
+/* CONTACT */
+
+/* BLOG */
+
+/* SHOP */
+
+/* TYPOGRAPHY */
+
+h1, h2, h3, h4, h5, h6 {
+  text-align: center;
+  margin: 2rem 0;
+}
+
+h1,
+.font-weight-900 {
+  font-weight: 900;
+}
+
+.font-weight-500 {
+  font-weight: 500;
+}
+
+.avenir {
+  font-family: Avenir, sans-serif;
+}
+
+.fort {
+  font-family: Fort, sans-serif;
+}
+
+strong {
+  font-weight: 900;
+}
+
+/* UTILITIES */
+
+[class*="row-cols"] {
+  margin-bottom: -2rem;
+}
+
+[class*="row-cols"] > * {
+  margin-bottom: 2rem;
+}
+
+.match-height [class^="col"],
+.match-height a[data-toggle="collapse"] {
+  display: flex;
+  flex-direction: column;
+}
+
+.match-height .card {
+  flex-grow: 1;
+}
+
+/* BACKGROUNDS */
+
+.bg__color--gray-500 {
+  background: var(--gray-500);
+  color: var(--surface);
+}
+
+.bg__color--gray-600 {
+  background: var(--gray-600);
+  color: var(--surface);
+}
+
+.bg__color--white-gray {
+  background: linear-gradient(180deg, #FFFFFF 50%, #F6F6F6 50%);
+}
+
+/* LINES */
+
+.hr__vertical {
+  margin: auto;
+  border-left: 3px solid;
+  border-radius: 10px;
+  height: 100%;
+  width: 0.5px;
+}
+
+.hr__compact {
+  margin: 2rem auto;
+  width: 8rem;
+}
+
+.border__left {
+  border-left-style: solid;
+  border-left-width: 0.75rem;
+  padding: 1rem 0 1rem 2rem;
+}
+
+.border-gray {
+  border-color: var(--gray-400);
+}
+
+/* NAVIGATION */
+
+nav {
+  background-color: var(--surface);
+  -webkit-box-shadow: var(--navigation-shadow);
+  -moz-box-shadow: var(--navigation-shadow);
+  box-shadow: var(--navigation-shadow);
+}
+
+.navbar__logo {
+  height: 2.2rem;
+  margin-top: -0.4rem;
+}
+
+.navbar-nav .nav-link {
+  font-size: 1rem;
+  text-decoration: none;
+  transition: color 0.25s ease-in-out;
+}
+
+.navbar-nav .nav-link:hover {
+  color: var(--primary) !important;
+  cursor: pointer;
+}
+
+/* FOOTER */
+
+footer * {
+  color: var(--surface);
+}
+
+.footer__logo {
+  display: block;
+  margin: 0 auto 2.15rem auto;
+  width: 10rem;
+}
+
+.footer__header {
+  text-transform: uppercase;
+  border-top: 2px solid var(--surface);
+  padding-top: 1rem;
+}
+
+.footer__menu,
+.footer__legal,
+.footer__social {
+  padding-left: 0;
+  list-style-type: none;
+}
+
+.footer__menu a:hover,
+.footer__legal a:hover {
+  color: var(--surface);
+  text-decoration: none;
+}
+
+.footer__menu li,
+.footer__legal li {
+  font-size: 0.825rem;
+  margin: 1rem 0;
+}
+
+.footer__social {
+  display: inline-flex;
+  justify-content: center;
+  width: 100%;
+}
+
+.footer__social li a {
+  margin: 0 1rem;
+  max-width: 2.5rem;
+  width: 100%;
+}
+
+.footer__social--etsy {
+  content: url(/img/icons/etsy.svg) / "Black Cat Apothekare Etsy";
+}
+
+.footer__social--instagram {
+  content: url(/img/icons/instagram.svg) / "Black Cat Apothekare Instagram";
+}
+
+/* BUTTONS */
+
+.btn:focus,
+.btn:active:focus,
+.btn.active:focus,
+.close:focus,
+.close:active:focus,
+.close.active:focus {
+  outline: none;
+  box-shadow: none;
+}
+
+/* JUMBOTRON */
+
+.jumbotron {
+  background-image: url("/img/banner.jpeg");
+  background-position: center center;
+  background-repeat: no-repeat;
+  background-size: cover;
+  color: var(--surface);
+}
+
+/* MEDIA QUERIES */
+
+/* Responsive Breakpoints & Up */
+
+/* Ridiculously small devices (iPhone 5/SE, less than 321px) */
+@media (min-width: 320.98px) {
+
+}
+
+/* Small devices (landscape phones, 576px and up) */
+@media (min-width: 576px) {
+  .footer__container {
+    padding: 5rem 3rem;
+  }
+
+  .about img {
+    width: 19%;
+  }
+}
+
+/* Medium devices (tablets, 768px and up) */
+@media (min-width: 768px) {
+
+}
+
+/* Large devices (desktops, 992px and up) */
+@media (min-width: 992px) {
+  h6 {
+    font-size: 1.1rem;
+  }
+
+  .panel {
+    padding: 4rem 0;
+  }
+}
+
+/* Extra large devices (large desktops, 1200px and up) */
+@media (min-width: 1200px) {
+  .footer__container {
+    padding: 5rem 10rem;
+  }
+}
+
+/* Responsive Breakpoints & Down */
+
+/* Ridiculously small devices (iPhone 5/SE, less than 321px) */
+@media (max-width: 320.98px) {
+
+}
+
+/* Extra small devices (portrait phones, less than 576px) */
+@media (max-width: 575.98px) {
+  .navbar {
+    padding: 1rem;
+    max-height: 100%;
+    overflow-y: auto;
+  }
+
+  .footer__container {
+    padding: 4rem 2rem;
+  }
+
+  .about img {
+    width: 100%;
+  }
+}
+
+/* Small devices (landscape phones, less than 768px) */
+@media (max-width: 767.98px) {
+  hr.container {
+    max-width: 80%;
+  }
+
+  [class*="row-cols"] > * {
+    flex: 0 0 100%;
+    max-width: 100%;
+  }
+}
+
+/* Medium devices (tablets, less than 992px) */
+@media (max-width: 991.98px) {
+  body {
+    font-size: 1rem;
+  }
+
+  h1 {
+    font-size: 1.75rem !important;
+  }
+
+  h2 {
+    font-size: 1.5rem !important;
+  }
+
+  h3 {
+    font-size: 1.3rem !important;
+  }
+
+  h4 {
+    font-size: 1.2rem !important;
+  }
+
+  h5 {
+    font-size: 1.1rem !important;
+  }
+
+  h6 {
+    font-size: 1rem !important;
+  }
+
+  .container {
+    max-width: 100%;
+  }
+
+  .panel {
+    padding: 2rem;
+  }
+
+  object.img-fluid {
+    max-width: 50%;
+  }
+
+  .rounded {
+    border-radius: 0 !important;
+  }
+}

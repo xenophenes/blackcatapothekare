@@ -1,0 +1,63 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="utf-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge" />
+    <meta name="description" content={{ default "Magickal curiosities and goods for zero waste everyday living." .Params.meta_description }} />
+    <meta name="viewport" content="width=device-width, initial-scale=1">
+
+    <!-- Facebook Open Graph Meta Tags -->
+		<meta property="og:image:width" content="1200" />
+		<meta property="og:image:height" content="800" />
+		<meta property="og:url" content="https://www.blackcatapothekare.github.com" />
+		<meta property="og:title" content="Magickal curiosities and goods for zero waste everyday living." />
+		<meta property="og:site_name" content="Black Cat Apothekare" />
+    <meta property="og:image" content="" />
+
+    <title>{{ .Title }} | {{ $.Site.Title }}</title>
+    <link rel="icon"  type="image/png"  href="/favicon.png">
+    <!-- Bootstrap 4.4.1 -->
+    {{ $bootstrap := resources.Get "/css/vendor/bootstrap.min.css" }}
+    <link href="{{ $bootstrap.Permalink }}" rel="stylesheet">
+
+    <!-- Bootstrap Overrides, Fonts, & Base CSS -->
+    {{ $overrides := resources.Get "/css/bootstrap-overrides.css" }}
+    {{ $base := resources.Get "/css/base.css" }}
+
+    {{ $global := slice $overrides $base | resources.Concat "css/global.css" | resources.Minify }}
+    <link href="{{ $global.Permalink }}" rel="stylesheet">
+
+    <!-- Structured Data -->
+    <script type="application/ld+json">
+    {
+      "@context": "https://schema.org",
+      "@type": "Organization",
+      "url": "https://blackcatapothekare.github.com/",
+      "logo": "",
+      "email": "mailto:blackcatapothekare@gmail.com",
+      "description": "Magickal curiosities and goods for zero waste everyday living.",
+      "name": "Black Cat Apothekare",
+      "sameAs" : [
+        "https://www.etsy.com/shop/BlackCatApothekare",
+        "https://www.instagram.com/blackcatapothekare/"
+      ]
+    }
+    </script>
+
+    {{ block "head" . }}{{ end }}
+  </head>
+  <body>
+    {{ partial "navigation.html" . }}
+    {{ block "main" . }}<!-- The part of the page that begins to differ between templates -->{{ end }}
+    {{ partial "footer.html" . }}
+
+    <!-- Define JavaScript files and concatenate them into a singular minified file -->
+    {{ $jquery := resources.Get "js/vendor/jquery.min.js" }}
+    {{ $popperjs := resources.Get "js/vendor/popper.min.js" }}
+    {{ $bootstrap := resources.Get "js/vendor/bootstrap.min.js" }}
+
+    <script src="{{ $jquery.RelPermalink }}"></script>
+    <script src="{{ $popperjs.RelPermalink }}"></script>
+    <script src="{{ $bootstrap.RelPermalink }}"></script>
+  </body>
+</html>

@@ -1,0 +1,43 @@
+{{ define "main" }}
+  <div class="blog">
+    <!-- JUMBOTRON -->
+    <div class="jumbotron jumbotron-fluid">
+      <div class="container">
+        <div class="row text-center">
+          <div class="col">
+            <h1>black cat apothekare</h1>
+          </div>
+        </div>
+      </div>
+    </div>
+
+    <div class="panel container">
+      <div class="row text-center">
+        <div class="col">
+          <ul class="list-group">
+            <li class="list-group-item">
+              <a href="{{ $.Site.Data.urls.about }}" class="stretched-link">
+                about
+              </a>
+            </li>
+            <li class="list-group-item">
+              <a href="{{ $.Site.Data.urls.blog }}" class="stretched-link">
+                blog
+              </a>
+            </li>
+            <li class="list-group-item">
+              <a href="{{ $.Site.Data.urls.shop }}" class="stretched-link">
+                shop
+              </a>
+            </li>
+            <li class="list-group-item">
+              <a href="{{ $.Site.Data.urls.contact }}" class="stretched-link">
+                contact
+              </a>
+            </li>
+          </ul>
+        </div>
+      </div>
+    </div>
+  </div>
+{{ end }}

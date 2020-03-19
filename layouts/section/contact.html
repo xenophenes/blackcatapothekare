@@ -1,0 +1,33 @@
+{{ define "main" }}
+  <div class="contact">
+    <!-- JUMBOTRON -->
+    <div class="jumbotron jumbotron-fluid">
+      <div class="container">
+        <div class="row text-center">
+          <div class="col">
+            <h1>contact</h1>
+          </div>
+        </div>
+      </div>
+    </div>
+
+    <div class="panel container">
+      <div class="row">
+        <div class="col">
+          <h3>get in touch</h3>
+          <p>
+            You can always contact via email at <a href="mailto:blackcatapothekare@gmail.com" rel="noopener" target="_blank">blackcatapothekare@gmail.com</a>, but you can also find Black Cat Apothekare on the following platforms!
+          </p>
+          <ul>
+            <li>
+              <a href="{{ $.Site.Data.social_media.etsy }}" rel="noopener" target="_blank">Etsy</a>
+            </li>
+            <li>
+              <a href="{{ $.Site.Data.social_media.instagram }}" rel="noopener" target="_blank">Instagram</a>
+            </li>
+          </ul>
+        </div>
+      </div>
+    </div>
+  </div>
+{{ end }}
